@@ -1,6 +1,7 @@
 package com.bestbuy.api.automation.models.Request;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
+
 import lombok.*;
 
 @Getter

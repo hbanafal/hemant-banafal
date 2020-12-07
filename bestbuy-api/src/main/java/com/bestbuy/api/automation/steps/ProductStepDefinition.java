@@ -33,6 +33,28 @@ public class ProductStepDefinition extends TestStep {
     }
 
     @Step
+    public void userIsFetchingAllProducts(int limit, int skip) {
+        productsActions = new ProductsActionsImpl();
+        response = productsActions.getAllProducts(limit, skip);
+        getProductsResponse = response.getBody().as(GetProductsResponse.class);
+
+    }
+
+    @Step
+    public void verifySuccessResponseForGetAllProducts(int limit, int skip) {
+
+        SoftAssertions softAssertion = new SoftAssertions();
+        softAssertion.assertThat(getProductsResponse.getLimit()).as("Limit of the Get all products is not correct")
+                .isEqualTo(limit);
+        softAssertion.assertThat(getProductsResponse.getSkip()).as("Skip of the Get All product is not correct")
+                .isEqualTo(getProductsResponse.getSkip());
+        softAssertion.assertThat(getProductsResponse.getData().size()).as("Number of products return is not correct")
+                .isEqualTo(limit);
+        softAssertion.assertAll();
+
+    }
+
+    @Step
     public void userCreateNewProductUsingAPI() {
         productsActions = new ProductsActionsImpl();
         response = productsActions.createNewProduct(postProductRequest);

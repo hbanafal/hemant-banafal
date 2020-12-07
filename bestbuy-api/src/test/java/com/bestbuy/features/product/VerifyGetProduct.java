@@ -24,10 +24,20 @@ public class VerifyGetProduct {
         productSteps.userIsHavingDetailsToCreateNewProduct("Duracell", "HardGood", 100.5, 0.5, "041333440019",
                 "Compatible with select electronic devices; C size", "Duracell", "MN1400R4Z",
                 "http://www.bestbuy.com/site/duracell-c-batteries", "http://img.bbystatic.com/BestBuy_US/images");
+
         productSteps.userCreateNewProductUsingAPI();
+
         productSteps.userFetchesProductDetailsForIdUsingGetAPI();
+
         productSteps.verifySuccessResponseForGetProduct(200, new Long(1), 10, 0, "Duracell", "HardGood", 100.5, 0.5,
                 "041333440019", "Compatible with select electronic devices; C size", "Duracell", "MN1400R4Z",
                 "http://www.bestbuy.com/site/duracell-c-batteries", "http://img.bbystatic.com/BestBuy_US/images");
+    }
+
+    @Test
+    @Title("Verify Get All Products with limit and skip as param")
+    public void verifyGetAllProductsWithLimit() {
+        productSteps.userIsFetchingAllProducts(20, 5);
+        productSteps.verifySuccessResponseForGetAllProducts(20, 5);
     }
 }

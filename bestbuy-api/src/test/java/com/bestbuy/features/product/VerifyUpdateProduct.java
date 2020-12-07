@@ -24,10 +24,13 @@ public class VerifyUpdateProduct {
         productSteps.userIsHavingDetailsToCreateNewProduct("Duracell", "HardGood", 100.5, 0.5, "041333440019",
                 "Compatible with select electronic devices; C size", "Duracell", "MN1400R4Z",
                 "http://www.bestbuy.com/site/duracell-c-batteries", "http://img.bbystatic.com/BestBuy_US/images");
+
         productSteps.userCreateNewProductUsingAPI();
+
         productSteps.userUpdatesProductDetailsUsingPatchAPI("Duracell", "HardGood", 200.5, 0.5, "041333440019",
                 "Compatible with select electronic devices; C size", "Duracell", "MN1400R4Z",
                 "http://www.bestbuy.com/site/duracell-c-batteries", "http://img.bbystatic.com/BestBuy_US/images");
+
         productSteps.verifySuccessReponseForUpdateProduct(200, 200.5);
     }
 }

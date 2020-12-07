@@ -7,8 +7,6 @@ This assignment is done using Java as programming language, Serenity as Junit wr
 
 **Testing scope** - Products service is used for api automation. All the CRUD operations are automated. 
 
-**Optimization** - 
-
 Requirements :
 1.  Java 1.8+ should be installed on the machine.
 2.  Gradle should be installed on the machine.
