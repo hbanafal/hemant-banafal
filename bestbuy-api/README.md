@@ -5,6 +5,10 @@
 
 This assignment is done using Java as programming language, Serenity as Junit wrapper, io.rest-assured Java library. POJO is used to serialize and deserialize into JSON object. BDD approach & Single-responsibility principle (SRP) is followed while creating the framework.
 
+**Testing scope** - Products service is used for api automation. All the CRUD operations are automated. 
+
+**Optimization** - 
+
 Requirements :
 1.  Java 1.8+ should be installed on the machine.
 2.  Gradle should be installed on the machine.
