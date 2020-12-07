@@ -7,6 +7,8 @@ This assignment is done using Java as programming language, Serenity as Junit wr
 
 Note - APK file is downloaded from internet as link to APK is not working in the home assignment PDF file. Monefy lite APK file is used to develop the tests. Test should work on main Monefy app also but the package name in id (for e.g. com.monefy.app.lite:id/income_button) used as locator maybe different for the main Monefy APK. APK file is already present inside src/test/resources/ folder.
 
+**Testing Scope** - Only few business critical scenarios are automated. 
+
 Requirements :
 1.  Java 1.8+ should be installed on the machine.
 2.  Gradle should be installed on the machine.
