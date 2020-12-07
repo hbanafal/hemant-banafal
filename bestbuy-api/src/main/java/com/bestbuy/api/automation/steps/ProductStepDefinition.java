@@ -103,7 +103,6 @@ public class ProductStepDefinition extends TestStep {
     public void userFetchesProductDetailsForIdUsingGetAPI() {
         productsActions = new ProductsActionsImpl();
         response = productsActions.getProductById(id);
-        response.prettyPrint();
     }
 
     @Step

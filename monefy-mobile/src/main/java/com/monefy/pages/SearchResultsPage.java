@@ -5,26 +5,31 @@ import java.util.List;
 import com.monefy.pages.locators.SearchResultsPageLocators;
 
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.core.pages.WebElementFacade;
 
 public class SearchResultsPage extends PageObject {
 
     private SearchResultsPageLocators locators;
 
-    public List<WebElementFacade> getSearchResultNotes() {
-        return locators.searchResultsNotes;
+    private BasePage basePage;
+
+    public List<String> getSearchResultNotes() {
+        return basePage.getTextOfElements(locators.searchResultsNotes);
     }
 
-    public List<WebElementFacade> getSearchResultCategories() {
-        return locators.searchResultsCategories;
+    public List<String> getSearchResultCategories() {
+        return basePage.getTextOfElements(locators.searchResultsCategories);
     }
 
-    public List<WebElementFacade> getSearchResultAmounts() {
-        return locators.searchResultsAmounts;
+    public List<String> getSearchResultAmounts() {
+        return basePage.getTextOfElements(locators.searchResultsAmounts);
     }
 
-    public List<WebElementFacade> getSearchResultDates() {
-        return locators.searchResultsDates;
+    public List<String> getSearchResultDates() {
+        return basePage.getTextOfElements(locators.searchResultsDates);
+    }
+
+    public boolean isEmptyResultsTextVisibl() {
+        return locators.emptyResults.isVisible();
     }
 
 }

@@ -1,11 +1,8 @@
 package com.monefy.pages;
 
-import java.util.List;
-
 import com.monefy.pages.locators.HomePageLocators;
 
 import net.serenitybdd.core.pages.PageObject;
-import net.serenitybdd.core.pages.WebElementFacade;
 
 public class HomePage extends PageObject {
 
@@ -36,27 +33,10 @@ public class HomePage extends PageObject {
     }
 
     public void clickSearch() {
-        locators.searchButton.getText();
+        locators.searchButton.click();
     }
 
     public void enterSearchText(String searchText) {
         locators.searchField.sendKeys(searchText);
     }
-
-    public List<WebElementFacade> getSearchResultNotes() {
-        return locators.searchResultsNotes;
-    }
-
-    public List<WebElementFacade> getSearchResultCategories() {
-        return locators.searchResultsCategories;
-    }
-
-    public List<WebElementFacade> getSearchResultAmounts() {
-        return locators.searchResultsAmounts;
-    }
-
-    public List<WebElementFacade> getSearchResultDates() {
-        return locators.searchResultsDates;
-    }
-
 }

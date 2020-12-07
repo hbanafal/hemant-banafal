@@ -20,4 +20,7 @@ public class SearchResultsPageLocators extends PageObject {
     @AndroidFindBy(id = "com.monefy.app.lite:id/date_text_view")
     public List<WebElementFacade> searchResultsDates;
 
+    @AndroidFindBy(id = "com.monefy.app.lite:id/empty_results_text_view")
+    public WebElementFacade emptyResults;
+
 }
